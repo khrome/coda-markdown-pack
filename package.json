@@ -27,11 +27,13 @@
   "dependencies": {
     "@codahq/packs-sdk": "^0.11.0",
     "html-to-text": "^8.2.0",
-    "marked": "^4.0.15"
+    "marked": "^4.0.15",
+    "xmldom": "^0.6.0",
+    "xpath": "^0.0.32"
   },
   "scripts": {
     "postinstall": "npx patch-package",
-    "example" : "npx coda execute pack.ts Markdown \"https://raw.githubusercontent.com/khrome/perigress/master/README.md\"",
-    "p" : "func() { npx coda upload pack.ts --notes \\\"\"$1\"\\\"; }; func"
+    "example": "npx coda execute pack.ts Markdown \"https://raw.githubusercontent.com/khrome/perigress/master/README.md\"",
+    "publish": "func() { npx coda upload pack.ts --notes \\\"\"$1\"\\\"; }; func"
   }
 }
