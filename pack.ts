@@ -74,20 +74,22 @@ pack.addFormula({
       let start = xpathText(section, html)[0];
       let stop = xpathText(terminal, html)[0];
       if(start){
-        let index = html.indexOf(start);
-        if(index && index !== -1){
-          result = result.substring(index);
-        }
-      }
-      if(stop){
-        let index = result.indexOf(stop);
-        if(index && index !== -1){
-          result = result.substring(0, index);
+        if(terminal){
+          let index = html.indexOf(start);
+          if(index && index !== -1){
+            result = result.substring(index+start.length);
+          }
+          index = result.indexOf(stop);
+          if(index && index !== -1){
+            result = result.substring(0, index);
+          }
+        }else{
+          result = start;
         }
       }
     }
     const text = convert(result, {
-      wordwrap: 130
+      wordwrap: 100
     });
 	return text;
   },

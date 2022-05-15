@@ -6,7 +6,7 @@ Because of the limitations of formulas there's no way to block include a styled 
 
 Usage
 -----
-Each secion will be given an id based on it's content, for example `## an Id, about something. 4` would end up with an id of `an-id-about-something-4` and would be xpath selectable with `//*[@id='an-id-about-something-4']`. Using this scheme you can parcel out all of the markdown content, place and style it as you want.
+Each section will be given an id based on it's content, for example `## an Id, about something. 4` would end up with an id of `an-id-about-something-4` and would be xpath selectable with `//*[@id='an-id-about-something-4']`. Using this scheme you can parcel out all of the markdown content, place and style it as you want.
 
 Examples
 --------
